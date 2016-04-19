@@ -1,0 +1,20 @@
+<section id="languages">
+   <h2>Linguagens Compiladas vs Linguagens Interpretadas</h2>
+   <p class="fragment">JIT(Just in time) Compilation</p>
+   <aside class="notes">
+        <strong>JIT compilers</strong>
+        The principle problem with the classic architecture is that runtime bytecode interpretation is slow. 
+        The performance can be improved with the addition of a compilation step to convert the bytecode into
+        machine code. Unfortunately waiting several minutes for a web page to fully compile isn’t going to
+        make your browser very popular.
+
+        The solution to this is “lazy compilation” by a JIT, or Just In Time compiler. As the name would suggest, 
+        it compiles parts of your code into machine code, just in time for you to need it. JIT compilers come in
+        a variety of categories, each with their own strategies for optimisation. Some like say a Regular Expression
+        compiler are dedicated to optimising a single task; whereas others may optimise common operations such as
+        loops or functions. A modern JavaScript engine will employ several of these compilers, all working together
+        improve the performance of your code.
+   </aside>
+</section>
+
+
