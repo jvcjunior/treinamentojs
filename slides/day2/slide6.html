@@ -1,0 +1,20 @@
+<section>
+   <h2>IIFE Pattern</h2>
+    <pre><code class="hljs" data-trim contenteditable>
+var foo = "foo";
+
+(function(bar){
+    
+    var foo = bar;
+    console.log(foo);
+    
+})(foo);
+
+console.log(foo);
+    </code>
+   <aside class="notes">
+        Foo dentro -> "foo""
+        Foo fora -> "foo"
+   </aside>
+</section>
+

@@ -1,0 +1,17 @@
+<section>
+  <h2>Escopo de bloco no ES6</h2>
+  <pre><code class="hljs" data-trim>
+function foo(){
+    var bar = "bar";
+    for(let i=1; i<=bar.length;i++){
+        console.log(bar.charAt(i));
+    }
+    console.log(i) //ReferenceError
+}
+
+foo();
+  </code></pre>
+   <aside class="notes">
+   </aside>
+</section>
+

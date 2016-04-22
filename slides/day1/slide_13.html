@@ -1,0 +1,19 @@
+<section>
+    <h2><a>Questão 3</a></h2>
+    <pre><code class="hljs" data-trim contenteditable>
+alert(foo());
+
+function foo(){
+    var bar = function() {
+        return 3;
+    };
+    return bar();
+    var bar = function() {
+        return 8;
+    };
+}
+    </code>
+     <aside class="notes">
+        Resposta: 3
+   </aside>
+</section>

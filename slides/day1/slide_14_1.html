@@ -1,0 +1,18 @@
+<section>
+    <h2><a>Questão 4</a></h2>
+    <pre><code class="hljs" data-trim contenteditable>
+//**Simulated processing sequence for Question 4**
+function foo(){
+    //a declaration for each function expression
+    var bar = undefined;
+    var bar = undefined;
+    return bar(); //TypeError: "bar not defined"
+    //neither Function Expression is reached
+    ...
+}
+alert(foo());
+    </code>
+     <aside class="notes">
+        Resposta: [Type Error: bar is not a function] 
+   </aside>
+</section>

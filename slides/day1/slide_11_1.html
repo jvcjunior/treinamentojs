@@ -1,0 +1,22 @@
+<section>
+    <h2><a>Questão 1</a></h2>
+    <pre><code class="hljs" data-trim contenteditable>
+//**Simulated processing sequence for Question 1**
+function foo(){
+    //define bar once
+    function bar() {
+        return 3;
+    }
+    //redefine it
+    function bar() {
+        return 8;
+    }
+    //return its invocation
+    return bar(); //8
+}
+alert(foo());
+    </code>
+     <aside class="notes">
+        Resposta: 8
+   </aside>
+</section>

@@ -1,0 +1,23 @@
+<section>
+    <h2><a>Questão 2</a></h2>
+    <pre><code class="hljs" data-trim contenteditable>
+//**Simulated processing sequence for Question 2**
+function foo(){
+    //a declaration for each function expression
+    var bar = undefined;
+    var bar = undefined;
+    //first Function Expression is executed
+    bar = function() {
+        return 3;
+    };
+    // Function created by first Function Expression is invoked
+    return bar();
+    // second Function Expression unreachable
+    ...
+}
+alert(foo()); //3
+    </code>
+     <aside class="notes">
+        Resposta: 3
+   </aside>
+</section>

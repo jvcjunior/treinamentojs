@@ -1,0 +1,44 @@
+<section>
+    <h2><a>Exemplo 1</a></h2>
+    <pre><code class="hljs" data-trim>
+
+    var foo= "bar";
+
+    function bar(){ 
+        var foo = "baz";
+    }
+
+    function baz(){
+        foo = "bam";
+        bam = "hello";
+    }
+    </code>
+
+    <h2 style="position: absolute;top: 220px;" class="fragment">Execução Javascript</h2>
+    <!-- not stric mode -->
+    <h2 style="position: absolute;top: 270px;color:red;" class="fragment">Execução em modo não estrito</h2>
+    <h4 style="position: absolute;top: 300px;" class="fragment">
+        Linha 9: Ei escopo de baz, eu tenho a declaração LHS de uma variável chamada bam; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 320px;" class="fragment">
+        Linha 9: Ei escopo global, eu tenho a declaração LHS de uma variável chamada bam; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 340px;color:green;" class="fragment">
+       O escopo global conhece porque bam criada*, então a atribuição ocorre. 
+    </h4>
+    <!-- stric mode -->
+    <h2 style="position: absolute;top: 400px;color:green;" class="fragment">Execução em modo não estrito</h2>
+    <h4 style="position: absolute;top: 430px;" class="fragment">
+        Linha 9: Ei escopo de baz, eu tenho a declaração LHS de uma variável chamada bam; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 450px;" class="fragment">
+        Linha 9: Ei escopo global, eu tenho a declaração LHS de uma variável chamada bam; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 470px;color:red;" class="fragment">
+       O escopo global não conhece. Bam não foi declarada.  VM86:46 Uncaught ReferenceError: bam is not defined 
+    </h4>
+
+    <h2 style="position: absolute;top: 520px;" class="fragment"><a>Undefined vs Undeclared?</a></h2>
+
+
+</section>

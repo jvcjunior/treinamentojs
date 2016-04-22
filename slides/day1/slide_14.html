@@ -1,0 +1,21 @@
+<section>
+    <h2><a>Questão 4</a></h2>
+    <pre><code class="hljs" data-trim contenteditable>
+function foo(){
+
+    return bar();
+    
+    var bar = function() {
+        return 3;
+    };
+    var bar = function() {
+        return 8;
+    };
+}
+
+alert(foo());
+    </code>
+     <aside class="notes">
+        Resposta: [Type Error: bar is not a function] 
+   </aside>
+</section>

@@ -1,16 +1,24 @@
-<section id="codigo1">
-<h2>Exemplo 1</h2>
-<pre><code class="hljs" data-trim>
+<section>
+    <h2><a>Exemplo 1</a></h2>
+    <pre><code class="hljs" data-trim>
 
-var foo= "bar";
+    var foo= "bar";
 
-function bar(){
-    var foo = "baz";
-}
+    function bar(){ 
+        var foo = "baz";
+    }
 
-function baz(){
-    foo = "bam";
-    bam = "hello";
-}
-</code>
+    function baz(){
+        foo = "bam";
+        bam = "hello";
+    }
+    </code>
+
+    <h2 style="position: absolute;top: 220px;" class="fragment">Compilação Javascript</h2>
+    <h4 style="position: absolute;top: 280px;" class="fragment">Linha 1: Ei escopo global, eu tenho a declaração de uma variável chamada foo;</h4>
+    <h4 style="position: absolute;top: 310px;" class="fragment">Linha 2: Ei escopo global, eu tenho a declaração de uma função* chamada bar;</h4>
+    <h4 style="position: absolute;top: 340px;" class="fragment">Linha 4: Ei escopo de bar, eu tenho a declaração de uma variável chamada foo;</h4>
+    <h4 style="position: absolute;top: 370px;" class="fragment">Linha 7: Ei escopo global, eu tenho a declaração de uma função chamada baz;</h4>
+    <h4 style="position: absolute;top: 400px;" class="fragment">Linha 7.5: Ei escopo de baz, eu tenho a declaração de uma variável chamada foo;</h4>
+
 </section>

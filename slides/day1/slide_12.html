@@ -1,0 +1,45 @@
+<style>
+    .reveal pre {
+     margin: 0; 
+    }
+</style>
+
+<section id="teste">
+    <h2><a>Questão 2</a></h2>
+    <pre  style="float:left;">
+    <code class="hljs" data-trim contenteditable>
+function foo(){
+    var bar = function() {
+        return 3;
+    };
+    return bar();
+    var bar = function() {
+        return 8;
+    };
+}
+
+alert(foo());
+    </code>
+    </pre>
+     <pre style="float:left;" class="fragment"><code class="hljs" data-trim contenteditable>
+//**Simulated processing sequence for Question 2**
+function foo(){
+    //a declaration for each function expression
+    var bar = undefined;
+    var bar = undefined;
+    //first Function Expression is executed
+    bar = function() {
+        return 3;
+    };
+    // Function created by first Function Expression is invoked
+    return bar();
+    // second Function Expression unreachable
+    ...
+}
+alert(foo()); //3
+    </code>
+    </pre>
+     <aside class="notes">
+        Resposta: 3
+   </aside>
+</section>

@@ -1,24 +1,50 @@
-<section id="codigo2">
-<h2>Exemplo 2</h2>
-<pre><code class="hljs" data-trim>
+<section>
+    <h2><a>Exemplo 1</a></h2>
+    <pre><code class="hljs" data-trim>
 
-var foo= "bar";
+    var foo= "bar";
 
-function bar(){
-    var foo = "baz";
-    
+    function bar(){ 
+        var foo = "baz";
+    }
+
     function baz(){
         foo = "bam";
         bam = "hello";
     }
+    </code>
+
+    <h2 style="position: absolute;top: 220px;" class="fragment">Execução Javascript</h2>
     
-    baz();
-}
+    <h4 style="position: absolute;top: 280px;" class="fragment">
+        Linha 1: Ei escopo global, eu tenho uma declaração LHS de uma variável chamada foo; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 300px;color:green;" class="fragment">
+        O escopo global conhece porque foo foi declarada na linha 1 da fase de compilação, então a atribuição ocorre. 
+    </h4>
+    
+    <h4 style="position: absolute;top: 330px;" class="fragment">
+        Linha 4: Ei escopo de bar, eu tenho a declaração LHS de uma variável chamada foo; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 350px;color:green;" class="fragment">
+        O escopo de bar conhece porque foo foi declarada na linha 4 da fase de compilação, então a atribuição ocorre. 
+    </h4>
+    
+    <h4 style="position: absolute;top: 380px;" class="fragment">
+        Linha 8: Ei escopo de baz, eu tenho a declaração LHS de uma variável chamada foo; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 400px;color:green;" class="fragment">
+        O escopo de baz conhece porque foo foi declarada na linha 7.5 da fase de compilação, então a atribuição ocorre. 
+    </h4>
+    
+    <h4 style="position: absolute;top: 430px;" class="fragment">
+        Linha 9: Ei escopo de baz, eu tenho a declaração LHS de uma variável chamada bam; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 450px;" class="fragment">
+        Linha 9: Ei escopo global, eu tenho a declaração LHS de uma variável chamada bam; Conhece?
+    </h4>
+    <h4 style="position: absolute;top: 470px;color:green;" class="fragment">
+       O escopo global conhece porque bam criada*, então a atribuição ocorre. 
+    </h4>
 
-bar();
-foo;
-bam;
-baz();
-
-</code>
 </section>

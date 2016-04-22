@@ -1,0 +1,21 @@
+<section>
+  <h2>Escopo de bloco no ES6</h2>
+  <pre><code class="hljs" data-trim>
+function foo(bar){
+    if(bar){
+        let baz = bar;
+        if(baz){
+            let bam = baz;
+        }
+        console.log(bam); //Error
+    }
+    console.log(baz); //Error
+    
+}
+
+foo("bar");
+  </code></pre>
+   <aside class="notes">
+   </aside>
+</section>
+
