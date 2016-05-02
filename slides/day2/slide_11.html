@@ -1,0 +1,19 @@
+<section>
+  <h2>Exemplo de Escopo Dinâmico</h2>
+  <pre><code class="hljs" data-trim>
+//exemplo teórico de escopo dinâmico 
+function foo(){
+    console.log(bar); 
+}
+
+function baz(){
+    var bar = "bar";
+    foo(); 
+}
+
+baz();
+  </code></pre>
+   <aside class="notes">
+   </aside>
+</section>
+

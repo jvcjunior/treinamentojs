@@ -1,0 +1,19 @@
+<section>
+   <h2><a>Hoisting</a></h2>
+   <pre><code class="hljs" data-trim >
+foo();
+
+var foo = 2;
+
+function foo(){
+  console.log("bar");
+}
+function foo(){
+  console.log("foo");
+}
+  </code></pre>
+   <aside class="notes">
+     Uncaught TypeError: d is not a function
+   </aside>
+</section>
+

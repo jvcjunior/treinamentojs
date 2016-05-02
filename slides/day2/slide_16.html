@@ -1,0 +1,21 @@
+<section>
+   <h2><a>Hoisting</a></h2>
+   <pre><code class="hljs" data-trim >
+a(1);
+
+function a(){
+  if(foo > 20) return foo;
+  return b(foo + 2);
+}
+function b(){
+  return c(foo) + 1;
+}
+function c(){
+   return a(foo*2);
+}
+  </code></pre>
+   <aside class="notes">
+     
+   </aside>
+</section>
+

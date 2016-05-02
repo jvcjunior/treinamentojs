@@ -1,0 +1,35 @@
+<section>
+   <h2><a>Hoisting</a></h2>
+   <pre><code class="hljs" data-trim >
+var a = b();
+var c = d();
+a;
+c;
+function b(){
+  return c;
+}
+var d = function(){
+  return b();
+}
+  </code></pre>
+  <br>
+  <pre><code class="hljs fragment" data-trim>
+function b(){
+  return c;
+}
+var a;
+var c;
+var d;
+a = b();
+c = d();
+a;
+c;
+d = function(){
+  return b();
+}
+  </code></pre>
+   <aside class="notes">
+     Uncaught TypeError: d is not a function
+   </aside>
+</section>
+
