@@ -1,0 +1,20 @@
+<section>
+  <h2>Regras palavra-chave <a>this</a></h2>
+  <pre><code class="hljs" data-trim>
+function foo(){
+    this.baz = "baz";
+    console.log(this.bar + " " + baz);
+}
+
+var bar = "bar";
+var baz = new foo();  //???
+  </code></pre>
+  <h2>Regra 4: new</h2>
+  <h4>1. Um novo objeto é criado.</h4>
+  <h4>2. Esse novo objeto é linkado a um novo objeto.</h4>
+  <h4>3. O novo objeto é o próprio <a>this</a></h4>
+  <h4>4. Se ela não retorna algo, vai adicionar um return this no final da mesma. </h4>
+  <aside class="notes">
+  </aside>
+</section>
+

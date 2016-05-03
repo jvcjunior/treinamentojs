@@ -1,0 +1,17 @@
+<section>
+   <h2>Regras palavra-chave <a>this</a></h2>
+   <pre><code class="hljs" data-trim>
+function foo(baz, bam){
+    console.log(this.bar + " " + baz + " " + bam);
+}
+
+var obj = {bar: "bar"};
+foo = foo.bind(obj, "baz");
+
+foo("bam");            //"baz baz bam"
+  </code></pre>
+  <h3>Hard binding</h3>
+  <aside class="notes">
+  </aside>
+</section>
+

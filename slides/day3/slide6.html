@@ -1,0 +1,20 @@
+<section>
+   <h2>Binding <a>confusion</a></h2>
+   <pre><code class="hljs" data-trim>
+function foo(){
+    var bar = 'bar1';
+    baz();
+}
+
+function baz(){
+    console.log(this.bar);
+}
+
+var bar = 'bar2';
+foo();
+  </code></pre>
+  
+  <aside class="notes">
+  </aside>
+   
+</section>

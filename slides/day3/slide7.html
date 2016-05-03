@@ -1,0 +1,22 @@
+<section>
+   <h2>Regras palavra-chave <a>this</a></h2>
+   <pre><code class="hljs" data-trim>
+function foo(){
+    console.log(this.bar);
+}
+
+var bar = "bar1";
+var obj = { bar: "bar2"};
+
+foo();            //bar1
+foo.call(obj);    //bar2
+foo.apply(obj);    //bar2
+  </code></pre>
+  
+  <h2>Regra 3: Explicit binding</h2>
+  <aside class="notes">
+      
+   </aside>
+   
+</section>
+

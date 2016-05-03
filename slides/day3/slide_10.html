@@ -1,0 +1,30 @@
+<section>
+   <h2>Regras palavra-chave <a>this</a></h2>
+   <pre><code class="hljs" data-trim>
+if(!Function.prototype.bind2){
+    Function.prototype.bind2 = 
+        function (o){
+            var fn = this; // the function
+            return function(){
+                fn.apply(o, arguments);
+            }
+        }
+}
+
+function foo(baz){
+    console.log(this.bar + " " + baz);
+}
+
+var obj = {bar: "bar"};
+foo = foo.bind2(obj);
+
+foo("baz");            //"bar baz"
+  </code></pre>
+  
+  <h3>Hard binding</h3>
+  <aside class="notes">
+      
+   </aside>
+   
+</section>
+

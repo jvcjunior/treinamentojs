@@ -1,0 +1,30 @@
+<section>
+   <h2>Regras palavra-chave <a>this</a></h2>
+   <pre><code class="hljs" data-trim>
+function bind(fn, o){
+    return function(){
+        fn.call(o);
+    }
+}
+
+function foo(){
+    console.log(this.bar);
+}
+
+var obj = {bar: "bar"};
+var obj2 = {bar: "bar2"};
+
+//var orig = foo;
+//foo = function(){
+//    orig.call(obj);
+//}
+foo = bind(foo, obj);
+
+foo();            //bar
+foo.call(obj2);    //???
+  </code></pre>
+  <h3>Hard binding</h3>
+  <aside class="notes">
+  </aside>
+</section>
+
