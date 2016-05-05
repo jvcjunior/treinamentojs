@@ -1,0 +1,21 @@
+<section>
+   <h2>Closure</h2>
+      <pre><code class="hljs" data-trim>
+function foo(){
+    var bar = "bar";
+    
+    return function(){
+        console.log(bar);
+    }
+}
+
+function bam(baz){
+    foo()();          //"bar"
+}
+
+bam();
+  </code></pre>
+   <aside class="notes">
+       Também pode retornar uma função de uma outra função.
+   </aside>
+</section>

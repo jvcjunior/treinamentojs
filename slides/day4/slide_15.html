@@ -1,0 +1,18 @@
+<section>
+   <h2>Closure: <a>"modern" module pattern</a></h2>
+      <pre><code class="hljs" data-trim>
+define("foo", function(){
+    
+    var o = { bar : "bar"};
+    
+    return { 
+        bar : function(){
+            console.log(o.bar);
+        }
+    };
+});
+  </code></pre>
+   <aside class="notes">
+
+   </aside>
+</section>

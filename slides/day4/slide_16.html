@@ -1,0 +1,22 @@
+<section>
+   <h2>Closure: <a>ES6+ module pattern</a></h2>
+    <pre><code class="hljs" data-trim>
+var o = { bar : "bar"};
+    
+export function bar(){
+    console.log(o.bar);
+}
+  </code></pre>
+  <p><a>foo.js</a></p>
+  
+  <pre><code class="hljs fragment" data-trim>
+import bar from "foo";
+bar();  // "bar"
+   
+module foo from "foo";
+foo.bar(); // "bar"
+  </code></pre>
+   <aside class="notes">
+     Verificar se o module ficou no ES6
+   </aside>
+</section>

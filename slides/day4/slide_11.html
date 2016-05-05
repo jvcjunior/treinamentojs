@@ -1,0 +1,16 @@
+<section>
+   <h2>Closure?</h2>
+      <pre><code class="hljs" data-trim>
+var foo = (function(){
+    var o = { bar : "bar"};
+    
+    return { obj: o };
+})();
+
+console.log(foo.obj.bar);   // "bar"
+  </code></pre>
+   <aside class="notes">
+       Existe uma função aqui que está lembrando seu escopo léxico?
+       Nós não transportamos um função para fora. Estamos mandando um referência a uma objeto.
+   </aside>
+</section>

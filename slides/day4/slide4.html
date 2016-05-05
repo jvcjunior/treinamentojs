@@ -1,0 +1,28 @@
+<section>
+   <h2>Closure</h2>
+   <pre><code class="hljs" data-trim>
+function foo(){
+    var bar = "bar";
+    
+    setTimeout(function(){
+        console.log(bar);
+    }, 1000);
+}
+
+foo();
+  </code></pre>
+  
+  <pre><code class="hljs fragment" data-trim>
+function foo(){
+    var bar = "bar";
+    
+    $("#btn").click(function(evt){
+        console.log(bar);
+    });
+}
+
+foo();
+  </code></pre>
+   <aside class="notes">
+   </aside>
+</section>

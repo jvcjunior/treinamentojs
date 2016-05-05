@@ -1,0 +1,22 @@
+<section>
+   <h2>Closure: <a>classic module pattern</a></h2>
+      <pre><code class="hljs" data-trim>
+var foo = (function(){
+    var o = { bar : "bar"};
+    
+    return { 
+        bar : function(){
+            console.log(o.bar);
+        }
+    };
+})();
+
+foo.bar();  // "bar"
+  </code></pre>
+   <aside class="notes">
+       Classic module pattern. 2 Características:
+       1. Tem de haver uma função externa executada.
+       2. Tem de haver uma ou mais funções que são retornadas daquela chamada de função que tem um closure
+       sobre o escopo privado interno.
+   </aside>
+</section>
