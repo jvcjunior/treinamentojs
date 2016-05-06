@@ -1,0 +1,31 @@
+<section>
+   <h2>Prototipação</h2>
+      <pre><code class="hljs" data-trim>
+function funcao(){}
+console.log(funcao.prototype);
+
+//Object {}
+//  ->constructor
+//  ->__proto__
+
+var objeto = new funcao();
+console.log(objeto.prototype); //undefined
+console.log(objeto.constructor); //function funcao(){}
+console.log(objeto.__proto__); 
+
+//Object {}
+//  ->constructor
+//  ->__proto__
+
+console.log([1,2].prototype);  //Resultado??
+  </code></pre>
+   <aside class="notes">
+     The __proto__ property of Object.prototype is an accessor property (a getter function and a setter function) 
+     that exposes the internal [[Prototype]] (either an object or null) of the object through which it is accessed.
+
+    The use of __proto__ is controversial, and has been discouraged. It was never originally included in the 
+    EcmaScript language spec, but modern browsers decided to implement it anyway. Only recently, the __proto__ property 
+    has been standardized in the ECMAScript 6 language specification for web browsers to ensure compatibility, so will be 
+    supported into the future.
+    </aside>
+</section>

@@ -1,0 +1,20 @@
+<section>
+<pre><code class="hljs" data-trim>
+function funcao(){}
+console.log(funcao.prototype);
+//Object {}
+//  ->constructor
+//  ->__proto__
+var objeto = new funcao();
+console.log(objeto.constructor); //function funcao(){}
+console.log(objeto.__proto__); 
+
+//Object {}
+//  ->constructor
+//  ->__proto__
+</code></pre>
+<img width="600" height="400" src="../../images/prototype.png">
+<aside class="notes">
+
+</aside>
+</section>

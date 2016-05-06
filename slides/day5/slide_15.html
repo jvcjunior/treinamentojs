@@ -1,0 +1,26 @@
+<section>
+<div style="float:left;width:60%;">
+    <pre><code class="hljs" data-trim>
+function Foo(who){
+    this.me = who;
+}
+
+Foo.prototype.identify = function(){
+    return "I am " + this.me;
+}   
+
+Foo.prototype.speak = function(){
+     alert("Hello, " + this.identify() + ".");
+};
+
+var a1 = new Foo("a1");
+ai.identify();   // alerts: "Hello, I am a1"
+</code></pre>
+</div>
+    
+<div style="float:left;width:40%;padding:0;">
+    <img style="padding:0;margin:0;" height="390" src="../../images/prototype_ex1_a2_speak_method.png">
+</div>
+<aside class="notes">
+</aside>
+</section>

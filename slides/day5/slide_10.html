@@ -1,0 +1,35 @@
+<section>
+<div style="float:left;width:60%;">
+    <pre><code class="hljs" data-trim>
+1. function Foo(who){
+2.     this.me = who;
+3. }
+4. 
+5. Foo.prototype.identify = function(){
+6.     return "I am " + this.me;
+7. }   
+8. 
+9. var a1 = new Foo("a1");
+10. var a2 = new Foo("a2");
+11.
+12. a2.speak = function(){
+13.     alert("Hello " + this.identify() + ".");
+14. }
+
+a1.constructor === Foo;
+a1.constructor === a2.constructor;
+
+a1.__proto__ === Foo.prototype;
+a1.__proto__ === a2.__proto__;
+</code></pre>
+</div>
+    
+<div style="float:left;width:40%;padding:0;">
+    <img style="padding:0;margin:0;" height="390" src="../../images/prototype_ex1_a1_a2_creation.png">
+</div>
+<h3>execução das linhas 9 e 10...</h3>
+<h4 class="fragment">... vamos agora para linha 12 ...</h4>
+<aside class="notes">
+
+</aside>
+</section>
