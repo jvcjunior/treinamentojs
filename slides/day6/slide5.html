@@ -1,0 +1,20 @@
+<section>
+   <h2>Async Patterns: Callbacks</a></h2>
+   <h3>Inversão de Controle</h3>
+   <aside class="notes">
+      Nós constumávamos estar no controle de nossa aplicação até aquela linha.
+      Assim que continuamos o nosso código e criamos um wrapper para ser usado por outra 'utility' nós 
+      perdemos o controle do nosso código. Nós entregamos o controle para aquela terceira parte, o que nesse caso
+      pdoeria ser uma API de terceiros.
+      Então, o que fizemos?
+      Existe uma confiança implícita criada quando invertemos o controle.
+      Confiamos que a api vai funcionar da forma que deveria, retornar o valor que deveria.
+      
+      Vamos pensar no perigo disso por um exemplo:
+      Vamos pensar que lidamos com o callback que uma api. 
+      E imagine que tem um bug nessa api. E ao invés de chamar o seu callback uma vez, vai chamar 1000 vezes.
+      
+      Imagine que no seu callback você cobra do cartão de crédito de um cliente porque aquele
+      callback está na tela de checkout de um e-commerce.
+   </aside>
+</section>

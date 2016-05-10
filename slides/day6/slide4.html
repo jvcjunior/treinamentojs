@@ -1,0 +1,34 @@
+<section>
+   <h2>Async Patterns: <a>Callbacks</a></h2>
+      <pre><code class="hljs fragment" data-trim>
+function one(cb){
+    console.log('one');
+    setTimeout(cb,1000);
+}
+
+function two(cb){
+    console.log('two');
+    setTimeout(cb,1000);
+}
+
+function three(){
+    console.log('one');
+    setTimeout(cb,1000);
+}
+
+one(function(){
+    two(three);
+});
+  </code></pre>
+  <h3>Callback <a>hell</a></h3>
+   <aside class="notes">
+       Vamos pensar em algumas coisas:
+       1. E se a função timeout não fosse algo contruido na linguagem que podemos confiar?
+       2. Se fosse uma API de terceiros?
+       3. Um callback é um continuação do nosso programa. Dizemos para aquela API pra lidar com a execução do nosso programa.
+       
+       Quando chamamos algo confiável como setTimeout, não é muito problema. Mas e quando chamamos algo que não confiamos?
+       Como uma API de terceiros que não podemos logar, debuggar, e só temos o código minificado. Pra falar a verdade estamos dando
+       muita confiança para ela.
+   </aside>
+</section>
